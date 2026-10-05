@@ -83,25 +83,34 @@ body {
 @media (max-width: 576px) {
     .menu {
         height: auto;
+        min-height: 0;
         flex-direction: column;
-        justify-content: center;
-        padding: 15px 0;
+        align-items: center;
+        padding: 12px 0;
+    }
+
+    .logo {
+        margin-bottom: 10px;
     }
 
     .menu ul {
+        width: 100%;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 6px 14px;
         padding: 0;
+        margin: 0;
         font-size: 13px;
     }
 
     .menu li {
-        margin: 5px 8px;
+        margin: 0;
     }
 
     .main-photo {
-        height: 80vh;
-        background-position: 35% center;
+        height: 75vh;
+        background-position: center;
     }
 
     .main-text {
