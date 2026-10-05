@@ -71,8 +71,11 @@ body {
     }
 
     .main-photo {
-        height: 85vh;
+        height: 70vh;
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
+        background-color: #eef3f7;
     }
 
     .menu li {
@@ -109,8 +112,11 @@ body {
     }
 
     .main-photo {
-        height: 75vh;
+        height: 65vh;
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
+        background-color: #eef3f7;
     }
 
     .main-text {
