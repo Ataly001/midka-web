@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  padding-block: 12px;
+  padding: 12px 0;
 }
 
 .menu ul {
@@ -18,7 +18,7 @@
 
 .pick {
   max-width: 760px;
-  padding-block: 40px;
+  padding: 40px 0;
 }
 
 #pick-form {
@@ -46,9 +46,9 @@
 }
 
 .pick-error {
-  margin: 0;
-  min-height: 24px;
   color: #b42318;
+  min-height: 24px;
+  margin: 0;
 }
 
 .pick-result {
@@ -56,6 +56,31 @@
   padding: 20px;
   border: 1px solid #aaa;
   border-radius: 8px;
+}
+
+.faq {
+  margin-top: 40px;
+}
+
+#faq-search {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #aaa;
+  padding: 12px 0;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.faq-answer {
+  padding-top: 12px;
 }
 
 @media (max-width: 768px) {

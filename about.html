@@ -10,6 +10,9 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ataly.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="js/theme.js" defer></script>
 </head>
 
 <body>
@@ -79,7 +82,32 @@
 
     </section>
 
+    <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions about NEOS</h2>
+        <label for="faq-search">Search questions and answers</label>
+        <input id="faq-search" type="search" placeholder="Try sparkling or business">
+        <p id="faq-count" role="status"></p>
+        <div id="faq-list"></div>
+        <noscript>Please enable JavaScript to use the question search.</noscript>
+    </section>
 </main>
 
+<footer class="footer border-top mt-4">
+    <div class="container foot-row">
+        <div>
+            <p class="fw-bold mb-1">NEOS Water</p>
+            <p class="mb-0">Artesian drinking water from Kazakhstan.</p>
+        </div>
+        <address class="mb-0">
+            <p class="fw-bold mb-1">SE 2530</p>
+            <a href="tel:+77470319697">+7 747 031 96 97</a>
+            <p class="mb-0">59 Kabanbay Batyr Avenue, Astana</p>
+        </address>
+        <p class="small mb-0">© 2026 NEOS Water</p>
+    </div>
+</footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>
