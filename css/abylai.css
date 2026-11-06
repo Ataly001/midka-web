@@ -45,3 +45,42 @@
     border-radius: 5px;
     font: inherit;
 }
+
+.water-pick {
+    margin-top: 35px;
+}
+
+#compare {
+    display: block;
+    margin: 12px 0;
+    max-width: 100%;
+}
+
+.table4 tr.chosen td {
+    background-color: #dcecff;
+    font-weight: bold;
+}
+
+#water-card:not([hidden]) {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+#water-img {
+    width: 180px;
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media (max-width: 576px) {
+    #water-card:not([hidden]) {
+        flex-direction: column;
+        align-items: start;
+    }
+}
