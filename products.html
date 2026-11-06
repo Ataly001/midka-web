@@ -33,6 +33,15 @@
             <p>Choose sparkling BLUE or still SILVER artesian water.</p>
         </section>
 
+        <div class="filters">
+            <label for="prod-search">Search products
+                <input id="prod-search" type="search" placeholder="Try BLUE or still">
+            </label>
+            <label for="water-type">Water type
+                <select id="water-type"><option value="all">All water</option><option value="sparkling">Sparkling</option><option value="still">Still</option></select>
+            </label>
+            <button id="prod-reset" type="button" class="btn btn-outline-dark">Reset filters</button>
+        </div>
         <p id="prod-count" role="status"></p>
         <section id="prod-list" class="row g-4" aria-label="Water collection"></section>
         <noscript>Please enable JavaScript to view the interactive catalogue.</noscript>

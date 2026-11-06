@@ -42,5 +42,32 @@ document.addEventListener("DOMContentLoaded", function () {
         productCount.textContent = items.length + " product(s) found.";
     }
 
-    renderProducts(products);
+    const searchInput = document.getElementById("prod-search");
+    const typeSelect = document.getElementById("water-type");
+
+    function applyFilters() {
+        const query = searchInput.value.trim().toLowerCase();
+        const selectedType = typeSelect.value;
+        const filtered = [];
+        for (const product of products) {
+            const matchesText = (product.name + " " + product.type).toLowerCase().includes(query);
+            const matchesType = selectedType === "all" || product.type === selectedType;
+            if (matchesText && matchesType) {
+                filtered.push(product);
+            }
+        }
+        renderProducts(filtered);
+        if (filtered.length === 0) {
+            productCount.textContent = "No products found. Try another search or reset the filters.";
+        }
+    }
+
+    searchInput.addEventListener("input", applyFilters);
+    typeSelect.addEventListener("change", applyFilters);
+    document.getElementById("prod-reset").addEventListener("click", function () {
+        searchInput.value = "";
+        typeSelect.value = "all";
+        applyFilters();
+    });
+    applyFilters();
 });
