@@ -1,0 +1,47 @@
+.menu {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.menu ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 18px;
+}
+
+.menu li {
+    margin-left: 0;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        justify-content: center;
+    }
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+    align-items: end;
+}
+
+.filters label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+    min-width: 180px;
+}
+
+.filters input,
+.filters select,
+#compare {
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    font: inherit;
+}
