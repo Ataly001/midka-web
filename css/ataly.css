@@ -1,0 +1,65 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-block: 12px;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+}
+
+.menu li {
+  margin-left: 0;
+}
+
+.pick {
+  max-width: 760px;
+  padding-block: 40px;
+}
+
+#pick-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#pick-form select,
+#faq-search {
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font: inherit;
+}
+
+#pick-form select.error {
+  border: 2px solid #b42318;
+}
+
+.pick-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pick-error {
+  margin: 0;
+  min-height: 24px;
+  color: #b42318;
+}
+
+.pick-result {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    justify-content: center;
+  }
+}

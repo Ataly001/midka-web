@@ -9,6 +9,9 @@
           rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ataly.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <script src="js/theme.js" defer></script>
 </head>
 <body>
 
@@ -43,6 +46,51 @@
         </a>
     </article>
 </section>
+    <section class="pick container" aria-labelledby="pick-title">
+        <h2 id="pick-title">Find your NEOS</h2>
+        <p>Choose your preference and how you plan to use the water.</p>
+        <form id="pick-form" novalidate>
+            <label for="bubbles">Water preference</label>
+            <select id="bubbles" required aria-describedby="pick-error">
+                <option value="">Choose a preference</option>
+                <option value="sparkling">I prefer sparkling water</option>
+                <option value="still">I prefer still water</option>
+                <option value="either">I would like to compare both</option>
+            </select>
+            <label for="purpose">Purpose</label>
+            <select id="purpose" required aria-describedby="pick-error">
+                <option value="">Choose a purpose</option>
+                <option value="daily">Personal use</option>
+                <option value="business">Restaurant, hotel or office</option>
+            </select>
+            <p id="pick-error" class="pick-error" role="status"></p>
+            <div class="pick-btns">
+                <button type="submit" class="btn btn-dark">Show recommendation</button>
+                <button type="reset" class="btn btn-outline-dark">Reset</button>
+            </div>
+        </form>
+        <div id="pick-result" class="pick-result" role="status" hidden>
+            <h3 id="rec-title"></h3>
+            <p id="rec-text"></p>
+            <a id="rec-link" class="btn btn-dark" href="products.html">See products</a>
+        </div>
+    </section>
 </main>
+<footer class="footer border-top mt-4">
+    <div class="container foot-row">
+        <div>
+            <p class="fw-bold mb-1">NEOS Water</p>
+            <p class="mb-0">Artesian drinking water from Kazakhstan.</p>
+        </div>
+        <address class="mb-0">
+            <p class="fw-bold mb-1">SE 2530</p>
+            <a href="tel:+77470319697">+7 747 031 96 97</a>
+            <p class="mb-0">59 Kabanbay Batyr Avenue, Astana</p>
+        </address>
+        <p class="small mb-0">© 2026 NEOS Water</p>
+    </div>
+</footer>
+
+    <script src="js/home.js"></script>
 </body>
 </html>
