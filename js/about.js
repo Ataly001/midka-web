@@ -11,7 +11,13 @@ $(document).ready(function () {
         const article = document.createElement("article");
         article.className = "faq-item";
         const heading = document.createElement("h3");
-        heading.textContent = item.question;
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "faq-btn";
+        button.textContent = item.question;
+        button.setAttribute("aria-expanded", "false");
+        button.setAttribute("aria-controls", "faq-answer-" + item.id);
+        heading.appendChild(button);
         const answer = document.createElement("div");
         answer.className = "faq-answer";
         answer.id = "faq-answer-" + item.id;
@@ -29,6 +35,7 @@ $(document).ready(function () {
         items.forEach(function (item) {
             list.appendChild(createQuestion(item));
         });
+        $(".faq-answer").hide();
         $("#faq-count").text(items.length === 0 ? "No matching questions. Try another word." : items.length + " question(s) found.");
     }
 
@@ -41,7 +48,18 @@ $(document).ready(function () {
             }
         }
         renderQuestions(matches);
+        $("#faq-list").stop(true, true).hide().fadeIn(150);
     }
+
+    $("#faq-list").on("click", ".faq-btn", function () {
+        const button = $(this);
+        const answer = button.closest(".faq-item").find(".faq-answer");
+        const isOpen = button.attr("aria-expanded") === "true";
+        $(".faq-answer").not(answer).stop(true, true).slideUp(200);
+        $(".faq-btn").not(button).attr("aria-expanded", "false");
+        button.attr("aria-expanded", String(!isOpen));
+        answer.stop(true, true).slideToggle(200);
+    });
 
     $("#faq-search").on("input", searchQuestions);
     renderQuestions(questions);
