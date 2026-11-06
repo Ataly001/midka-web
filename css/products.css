@@ -1,0 +1,40 @@
+#product-list button {
+  margin-top: 8px;
+}
+
+.product-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.product-tools label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.product-tools input,
+.product-tools select {
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+.favorites-section {
+  margin-top: 40px;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+#favorites-list li {
+  margin-bottom: 12px;
+}
+
+#favorites-list button {
+  margin-left: 12px;
+}
