@@ -1,0 +1,101 @@
+.menu {
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.menu ul {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+}
+
+.menu li {
+  margin-left: 0;
+}
+
+.pick {
+  max-width: 760px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#pick-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#pick-form select, 
+#faq-search {
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  font: inherit;
+}
+
+#pick-form select.error {
+  border: 2px solid #b42318;
+}
+
+.pick-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.pick-error {
+  color: #b42318;
+  min-height: 24px;
+  margin: 0;
+}
+
+.pick-result {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+}
+
+.faq {
+  margin-top: 40px;
+}
+
+#faq-search {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid #aaa;
+  padding: 12px 0;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.faq-answer {
+  padding-top: 12px;
+}
+
+.faq-btn {
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  color: #18283d;
+  background: #edf2f7;
+  border: 0;
+  border-radius: 5px;
+  font: inherit;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,139 @@
+body > header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #102338;
+    border-bottom: 1px solid #29445e;
+}
+
+header .menu a {
+    color: #edf4fb;
+}
+
+header .menu ul a {
+    display: block;
+    padding: .35rem .25rem;
+    border-bottom: 2px solid transparent;
+}
+
+header .menu ul a:hover,
+header .menu ul a[aria-current="page"] {
+    color: #fff;
+    border-bottom-color: #8cc7ff;
+}
+
+header .menu .theme-btn {
+    color: #edf4fb;
+    border-color: #a6bfd6;
+}
+
+header .menu .theme-btn:hover {
+    background: #334559;
+}
+
+@media (max-width: 576px) {
+    header .menu ul {
+        order: 2;
+    }
+}
+
+.footer {
+    background: #f5f7fa;
+    padding: 4rem 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.footer a {
+    color: #195184;
+}
+
+.theme-btn {
+    flex: 0 0 auto;
+}
+
+.dark-mode {
+    color-scheme: dark;
+}
+
+.dark-mode body {
+    background: #101820;
+    color: #f1f5f9;
+}
+
+.dark-mode .footer {
+    background: #182430;
+}
+
+.dark-mode .footer a {
+    color: #a9d6ff;
+}
+
+.dark-mode .menu a {
+    color: #f1f5f9;
+}
+
+.dark-mode .btn-dark {
+    background: #eef2f6;
+    border-color: #eef2f6;
+    color: #17202b;
+}
+
+.dark-mode .btn-outline-dark {
+    border-color: #b8c6d6;
+    color: #f1f5f9;
+}
+
+.dark-mode .btn-outline-dark:hover,
+.dark-mode .btn-outline-dark:focus {
+    background: #334559;
+}
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea,
+.dark-mode .faq-btn {
+    background: #263345;
+    color: #fff;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+    color: #c2ccda;
+}
+
+.dark-mode .table4 table,
+.dark-mode .table4 tbody tr:nth-child(even),
+.dark-mode .table4 tbody tr:hover {
+    background: #202d3b;
+}
+
+.dark-mode .table4 td {
+    color: #f1f5f9;
+}
+
+.dark-mode .table4 tr.chosen td {
+    background: #254d71;
+}
+
+.dark-mode .field-error,
+.dark-mode .pick-error {
+    color: #ffb4ab;
+}
+
+.dark-mode #form-status.success {
+    color: #9be7ad;
+}
+
+.dark-mode .contact-topics a,
+.dark-mode .info6 address a {
+    color: #a9d6ff;
+}
+
+.foot-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
