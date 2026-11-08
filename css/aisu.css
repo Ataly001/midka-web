@@ -1,0 +1,11 @@
+.menu { flex-wrap: wrap; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+.menu ul { flex-wrap: wrap; justify-content: center; gap: 8px 18px; }
+.menu li { margin-left: 0; }
+@media (max-width: 768px) { .menu { justify-content: center; } }
+.estimate { max-width: 720px; margin: 20px auto 50px; }
+.estimate form { display: flex; flex-direction: column; gap: 12px; padding: 24px; border: 1px solid #aaa; border-radius: 8px; }
+.estimate input, .estimate select { width: 100%; padding: 10px; font: inherit; }
+.field-error { color: #b42318; min-height: 1.2em; display: block; }
+.form6 input.error, .form6 select.error, .form6 textarea.error, #qty.error { border: 2px solid #b42318; }
+#form-status, #total { margin-top: 12px; font-weight: bold; }
+#form-status.success { color: #176b39; }
