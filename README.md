@@ -43,10 +43,18 @@ The contact form checks data locally; online sending is unavailable. It does not
 
 ## Testing
 
-See `docs/TESTING.md` for inputs, expected results, keyboard checks and responsive checks. Everyone should repeat the checks for their pages and verify all links before release.
+Open the website and check that all pages work correctly.
+
+- Test the calculator and contact form.
+- Check that buttons and links work.
+- Make sure the website looks good on mobile and desktop.
 
 ## Publication
 
-Source repository: https://github.com/Ataly001/midka-web
+GitHub repository: https://github.com/Ataly001/midka-web
 
-After all contributions are merged, the repository owner can enable Settings → Pages → Deploy from a branch → main → /(root). Use the actual URL shown by GitHub after a successful deployment. Verify all six pages there and submit that URL together with the repository link. Publication has not been performed as part of this file package.
+The website can be published using GitHub Pages.
+
+Go to **Settings → Pages**, select **main** branch and **/(root)** folder, then click Save.
+
+After publishing, copy the website link and share it together with the repository link.
