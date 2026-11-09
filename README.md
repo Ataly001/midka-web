@@ -41,6 +41,19 @@ Each page loads its own feature scripts and the shared theme files css/theme.css
 
 The contact form checks data locally; online sending is unavailable. It does not send or store messages. Success means validation passed, not delivery. The displayed calculator prices (500/600 KZT) are reference values for estimation, not confirmed commercial quotations. Changing calculator inputs clears the previous result. Form data and selections reset on reload. The theme preference persists. No API key, account system or backend is required.
 
+## Testing
+
+1. Open index.html using VS Code Live Server.
+2. Check navigation between all six pages.
+3. Test the Home recommendation form and Reset button.
+4. Search FAQ questions and open their answers.
+5. Search products, select a water type and reset the filters.
+6. Select BLUE and SILVER on the Water page.
+7. Test the calculator with valid and invalid quantities.
+8. Test the Contact form with empty, invalid and valid values.
+9. Switch the theme, navigate between pages and reload.
+10. Check the layout on mobile and desktop.
+
 ## Publication
 
 - Website: https://ataly001.github.io/midka-web/
