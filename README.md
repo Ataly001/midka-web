@@ -1,28 +1,47 @@
 # NEOS Water
 
-NEOS Water is a website about artesian water from Kazakhstan.
+A responsive six-page website for NEOS artesian water. Visitors can explore BLUE and SILVER, find a water recommendation, search questions and products, compare water types and calculate a cost estimate.
 
-## Pages
+## Team and page ownership
 
-- Home
-- About
-- Water
-- Products
-- Business
-- Contact
+| Team member | Pages | Features |
+| --- | --- | --- |
+| Ataly | Home, About | Water recommendation, searchable FAQ, jQuery accordion |
+| Abylai | Water, Products | Array-based catalogue, search and type filtering, interactive comparison |
+| Aisu | Business, Contact | Cost calculator, custom form validation, live feedback and reset |
 
-## Features
+Each member maintains the footer on their two pages. Actual contributions are recorded in Git history.
 
-- Responsive design
-- Flexbox
-- CSS Grid
-- Bootstrap Grid
-- Bootstrap buttons and containers
-- Responsive images
-- Product comparison table
-- Contact form
-- Relative and absolute positioning
-- Media queries for tablet and mobile
+## Run
 
-## How to Run
-Open index.html and relocate via navigation bar
+Run the website folder with VS Code Live Server. Use the same server address for all pages so they share the theme preference. No installation or build is needed. Bootstrap 5.3.3 CSS loads from its CDN, so an internet connection is required. jQuery 3.7.1 is bundled locally with its original license notice.
+
+## Pages and features
+
+- `index.html`: original hero and recommendation form based on water preference and purpose, with validation, result and reset.
+- `about.html`: original brand content plus FAQ rendered from an array, search across questions and answers, empty-result feedback and one-answer-at-a-time jQuery accordion.
+- `quality.html`: original image and comparison table plus selection of BLUE/SILVER, updated product details and table highlighting.
+- `products.html`: original products, images, badges, descriptions and links rendered from an array; case-insensitive search combined with a water-type filter and reset.
+- `business.html`: original business content plus a validated quantity and price calculator.
+- `contact.html`: custom required-field checks, name/email/topic/message rules, field-specific errors, focus on the first invalid field, character counter and reset.
+- All six pages: responsive navigation, company contact footer and persistent light/dark theme.
+
+## Source organization
+
+- `css/style.css`: original responsive midterm styles, preserved unchanged.
+- `css/ataly.css`, `js/home.js`, `js/about.js`: Home and About.
+- `css/abylai.css`, `js/products.js`, `js/water.js`: Water and Products.
+- `css/aisu.css`, `js/business.js`, `js/contact.js`: Business and Contact.
+- `js/jquery-3.7.1.min.js`: full jQuery library, used on About.
+- `images/`: original images.
+
+Each page loads its own feature scripts and the shared theme files css/theme.css and js/theme.js. Page-owner CSS repeats a small navigation/focus rule so contributors can maintain their pages without editing someone else's files.
+
+## Behavior and limits
+
+The contact form checks data locally; online sending is unavailable. It does not send or store messages. Success means validation passed, not delivery. The displayed calculator prices (500/600 KZT) are reference values for estimation, not confirmed commercial quotations. Changing calculator inputs clears the previous result. Form data and selections reset on reload. The theme preference persists. No API key, account system or backend is required.
+
+## Publication
+
+- Website: https://ataly001.github.io/midka-web/
+- Repository: https://github.com/Ataly001/midka-web
