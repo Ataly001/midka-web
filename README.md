@@ -41,20 +41,7 @@ Each page loads its own feature scripts and the shared theme files css/theme.css
 
 The contact form checks data locally; online sending is unavailable. It does not send or store messages. Success means validation passed, not delivery. The displayed calculator prices (500/600 KZT) are reference values for estimation, not confirmed commercial quotations. Changing calculator inputs clears the previous result. Form data and selections reset on reload. The theme preference persists. No API key, account system or backend is required.
 
-## Testing
-
-Open the website and check that all pages work correctly.
-
-- Test the calculator and contact form.
-- Check that buttons and links work.
-- Make sure the website looks good on mobile and desktop.
-
 ## Publication
 
-GitHub repository: https://github.com/Ataly001/midka-web
-
-The website can be published using GitHub Pages.
-
-Go to **Settings → Pages**, select **main** branch and **/(root)** folder, then click Save.
-
-After publishing, copy the website link and share it together with the repository link.
+- Website: https://ataly001.github.io/midka-web/
+- Repository: https://github.com/Ataly001/midka-web
