@@ -14,7 +14,7 @@ Each member maintains the footer on their two pages. Actual contributions are re
 
 ## Run
 
-Run the website folder with VS Code Live Server. Use the same server address for all pages so they share the theme preference. No installation or build is needed. Bootstrap 5.3.3 CSS loads from its CDN, so an internet connection is required. jQuery 3.7.1 is bundled locally with its original license notice.
+Run the website folder with VS Code Live Server. Use the same server address for all pages so they share the theme preference. No installation or build is needed. Bootstrap 5.3.3 CSS loads from its CDN, so an internet connection is required. jQuery 3.7.1 loads from its CDN. An internet connection is required.
 
 ## Pages and features
 
@@ -32,7 +32,6 @@ Run the website folder with VS Code Live Server. Use the same server address for
 - `css/ataly.css`, `js/home.js`, `js/about.js`: Home and About.
 - `css/abylai.css`, `js/products.js`, `js/water.js`: Water and Products.
 - `css/aisu.css`, `js/business.js`, `js/contact.js`: Business and Contact.
-- `js/jquery-3.7.1.min.js`: full jQuery library, used on About.
 - `images/`: original images.
 
 Each page loads its own feature scripts and the shared theme files css/theme.css and js/theme.js. Page-owner CSS repeats a small navigation/focus rule so contributors can maintain their pages without editing someone else's files.
