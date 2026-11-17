@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         article.appendChild(heading);
         article.appendChild(description);
         article.appendChild(link);
+        article.dataset.productName = product.name;
         return article;
     }
 
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             productList.appendChild(createProductCard(product));
         }
         productCount.textContent = items.length + " product(s) found.";
+        productList.dispatchEvent(new Event("products-rendered"));
     }
 
     const searchInput = document.getElementById("prod-search");

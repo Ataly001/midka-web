@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/abylai.css">
     <link rel="stylesheet" href="css/theme.css">
     <script src="js/theme.js" defer></script>
+    <link rel="stylesheet" href="css/packs.css">
 </head>
     <body>
 
@@ -75,6 +76,17 @@
                 <div><h3 id="water-name"></h3><p id="water-desc"></p><a href="products.html" class="btn btn-dark">View products</a></div>
             </article>
         </section>
+    <section class="packs" aria-labelledby="packs-title">
+        <h2 id="packs-title">Compare bottle packs</h2>
+        <p>See how many bottles and how much water different pack sizes provide.</p>
+        <form id="pack-form" novalidate>
+            <label for="pack-count">Number of packs (1–100)</label>
+            <input id="pack-count" class="form-control" type="number" min="1" max="100" value="2" aria-describedby="pack-status">
+            <button class="btn btn-dark mt-3" type="submit">Compare packs</button>
+        </form>
+        <p id="pack-status" class="mt-3" role="status"></p>
+        <ul id="pack-list" class="pack-grid list-unstyled"></ul>
+    </section>
 </main>
 
     <footer class="footer border-top mt-4">
@@ -93,5 +105,6 @@
 </footer>
 
     <script src="js/water.js"></script>
+    <script src="js/packs.js"></script>
 </body>
     </html>
