@@ -137,3 +137,41 @@ header .menu .theme-btn:hover {
     align-items: flex-start;
     gap: 1rem;
 }
+
+.menu .menu-toggle {
+  display: none;
+  color: #edf4fb;
+  border-color: #a6bfd6;
+}
+
+@media (max-width: 768px) {
+  header .menu.has-toggle {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .menu.has-toggle .logo {
+    margin-bottom: 0;
+    margin-right: auto;
+  }
+
+  .menu.has-toggle .menu-toggle {
+    display: inline-block;
+  }
+
+  header .menu.has-toggle ul {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  header .menu.has-toggle.menu-open ul {
+    display: flex;
+  }
+
+  header .menu.has-toggle ul a {
+    padding: 8px 0;
+  }
+}

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/ataly.css">
     <link rel="stylesheet" href="css/theme.css">
     <script src="js/theme.js" defer></script>
+    <link rel="stylesheet" href="css/weather.css">
 </head>
 <body>
 
@@ -75,6 +76,25 @@
             <a id="rec-link" class="btn btn-dark" href="products.html">See products</a>
         </div>
     </section>
+    <section class="container weather" aria-labelledby="weather-title">
+        <h2 id="weather-title">Plan water for an outdoor event</h2>
+        <p>Check the forecast for your event, then estimate the cost of bottled water.</p>
+        <form id="weather-form" class="d-flex flex-wrap align-items-end gap-3">
+            <div>
+                <label for="weather-city">City</label>
+                <select id="weather-city" class="form-select">
+                    <option value="astana">Astana</option>
+                    <option value="almaty">Almaty</option>
+                    <option value="shymkent">Shymkent</option>
+                </select>
+            </div>
+            <button class="btn btn-dark" type="submit">Check forecast</button>
+        </form>
+        <p id="weather-status" class="mt-3" role="status"></p>
+        <div id="weather-days" class="row g-3"></div>
+        <a class="btn btn-outline-dark mt-3" href="business.html#est-title">Estimate water cost</a>
+        <p class="mt-3"><a href="https://open-meteo.com/">Weather data by Open-Meteo</a></p>
+    </section>
 </main>
 <footer class="footer border-top mt-4">
     <div class="container foot-row">
@@ -92,5 +112,6 @@
 </footer>
 
     <script src="js/home.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>

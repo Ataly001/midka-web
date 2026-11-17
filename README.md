@@ -57,3 +57,45 @@ The contact form checks data locally; online sending is unavailable. It does not
 
 - Website: https://ataly001.github.io/midka-web/
 - Repository: https://github.com/Ataly001/midka-web
+
+## Final features
+
+| Member | Final contribution |
+| --- | --- |
+| Ataly | Three-day forecast on Home and this README |
+| Abylai | Bottle pack comparison on Water and persistent favorites on Products |
+| Aisu | Delivery plans and the delivery overview on Business |
+
+1. **API:** Choose Astana, Almaty or Shymkent on Home and request a three-day forecast. The page shows loading, success, empty or error feedback and builds the forecast cards from JSON.
+2. **OOP:** The Water page creates two `BottlePack` objects. Their methods calculate bottle counts and water volumes from the number of packs entered.
+3. **Persistent favorites:** Products saves favorites as JSON in `localStorage` under `neos-favorites`. Users can save, remove or clear favorites.
+4. **CRUD:** Business supports creating, viewing, editing and deleting delivery plans. Plans are saved as JSON under `neos-delivery-plans`.
+5. **Dashboard:** The delivery overview updates the total number of plans, bottles and estimated cost. Two bars show the share of BLUE and SILVER bottles.
+
+## Forecast API
+
+- Provider: [Open-Meteo](https://open-meteo.com/en/docs).
+- Endpoint: `GET https://api.open-meteo.com/v1/forecast`.
+- Request: city coordinates, `forecast_days=3`, `timezone=auto`, and daily minimum and maximum temperatures.
+- Response: `daily.time`, `daily.temperature_2m_min` and `daily.temperature_2m_max`. Each date and pair of temperatures share the same array index.
+- This course project uses the public forecast endpoint with no secret key. An internet connection is required.
+
+## Testing the final features
+
+1. Run the project with Live Server. On Home request a forecast, change the city and try again. Use the browser offline mode to check the error message.
+2. On Water enter 2 packs. Expect 12 bottles and 6 L for Small, and 24 bottles and 12 L for Large. Try 0 and 1.5 to check validation.
+3. On Products save BLUE and reload. Turn on Show only favorites and verify that the catalog also respects the search and type filters. Remove BLUE or save both and use Clear favorites. The old product search and filters still work.
+4. On Business create a 20-bottle BLUE plan, reload, edit it to 5 SILVER bottles, then delete it. Verify the totals and bars update each time.
+5. For storage recovery, put invalid JSON in either final storage key in a test profile and reload. The feature should open with an empty list and allow new entries.
+6. Check all six pages at mobile, tablet and desktop widths, and repeat the earlier checks for theme, FAQ, recommendations and validation.
+
+Delivery plans and favorites belong to the browser and site address where they were saved. Delivery plans are estimates stored on the device.
+
+## Mobile navigation
+
+At 768 px or narrower, tap Menu to open or close the six page links.
+Escape closes an open menu and returns focus to the button.
+The existing theme button stays accessible in the header.
+Ataly's archive includes the two shared files for this feature.
+
+The delivery form shows an estimate as soon as the water type and quantity are valid. Try a plan name of `123` or `@@@`, an empty water type, and quantities such as `abc`, `1.5`, `0` and `1001`. Each invalid field should show its own message. Names such as `Office 2` and `Офис 2` are accepted. The overview shows the share bars once a plan exists.

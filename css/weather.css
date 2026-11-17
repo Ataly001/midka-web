@@ -1,0 +1,17 @@
+.weather {
+  max-width: 760px;
+  margin: 48px auto 72px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.weather-card {
+  padding: 16px;
+  height: 100%;
+  border: 1px solid #888;
+  border-radius: 8px;
+}
+
+.weather a {
+  color: inherit;
+}

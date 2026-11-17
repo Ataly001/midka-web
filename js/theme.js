@@ -81,3 +81,33 @@ document.addEventListener("click", function (event) {
     target.searchParams.set("theme", themePage.classList.contains("dark-mode") ? "dark" : "light");
     link.href = target.href;
 });
+
+const siteMenu = document.querySelector(".menu");
+const menuLinks = siteMenu.querySelector("ul");
+const menuButton = document.createElement("button");
+
+menuLinks.id = "site-links";
+menuButton.type = "button";
+menuButton.className = "btn btn-sm menu-toggle";
+menuButton.textContent = "☰ Menu";
+menuButton.setAttribute("aria-controls", "site-links");
+siteMenu.insertBefore(menuButton, menuLinks);
+siteMenu.classList.add("has-toggle");
+
+function setMenuOpen(open) {
+    siteMenu.classList.toggle("menu-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+}
+
+setMenuOpen(false);
+
+menuButton.addEventListener("click", function () {
+    setMenuOpen(!siteMenu.classList.contains("menu-open"));
+});
+
+siteMenu.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && siteMenu.classList.contains("menu-open")) {
+        setMenuOpen(false);
+        menuButton.focus();
+    }
+});
