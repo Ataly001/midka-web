@@ -1,17 +1,17 @@
- <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>NEOS Water - Business</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/aisu.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEOS Water - Business</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aisu.css">
     <link rel="stylesheet" href="css/theme.css">
     <script src="js/theme.js" defer></script>
+    <link rel="stylesheet" href="css/plans.css">
 </head>
-    <body>
-
+<body>
     <header>
         <nav class="menu container">
             <a class="logo" href="index.html">NEOS</a>
@@ -55,36 +55,93 @@
                 </article>
             </div>
         </section>
-    <section class="estimate container" aria-labelledby="est-title">
+
+        <section class="estimate container" aria-labelledby="est-title">
             <h2 id="est-title">Business cost estimate</h2>
             <p>Prices shown are for estimation only. This calculation does not place an order.</p>
+
             <form id="est-form" novalidate>
                 <label for="est-water">Water type</label>
-                <select id="est-water"><option value="silver">SILVER: 500 KZT</option><option value="blue">BLUE: 600 KZT</option></select>
+                <select id="est-water">
+                    <option value="silver">SILVER: 500 KZT</option>
+                    <option value="blue">BLUE: 600 KZT</option>
+                </select>
+
                 <label for="qty">Number of bottles (1–1000)</label>
                 <input id="qty" type="number" min="1" max="1000" step="1" value="10" aria-describedby="est-error">
                 <small id="est-error" class="field-error" aria-live="polite"></small>
+
                 <button type="submit" class="btn btn-dark">Calculate estimate</button>
                 <p id="total" role="status"></p>
             </form>
         </section>
-</main>
+
+        <section class="container plans" aria-labelledby="plans-title">
+            <h2 id="plans-title">Delivery plans</h2>
+            <p>Save estimates on this device as you plan deliveries.</p>
+
+            <form id="plan-form" novalidate>
+                <label for="plan-name">Plan name</label>
+                <input id="plan-name" aria-describedby="plan-name-error" class="form-control mb-2" type="text" maxlength="60" required>
+                <small id="plan-name-error" class="field-error"></small>
+
+                <label for="plan-water">Water type</label>
+                <select id="plan-water" aria-describedby="plan-water-error" class="form-select mb-2">
+                    <option value="">Choose water</option>
+                    <option value="blue">BLUE</option>
+                    <option value="silver">SILVER</option>
+                </select>
+                <small id="plan-water-error" class="field-error"></small>
+
+                <label for="plan-qty">Number of bottles (1–1000)</label>
+                <input id="plan-qty" aria-describedby="plan-qty-error" class="form-control" type="text" inputmode="numeric" required>
+                <small id="plan-qty-error" class="field-error"></small>
+
+                <p id="plan-preview" aria-live="polite"></p>
+                <button id="plan-save" class="btn btn-dark" type="submit">Save plan</button>
+                <button id="plan-cancel" class="btn btn-outline-dark" type="button" hidden>Cancel edit</button>
+            </form>
+
+            <p id="plan-status" class="mt-3" role="status"></p>
+
+            <h3 class="mt-4">Saved plans</h3>
+            <p id="plan-empty">Save a delivery plan to see it here.</p>
+            <ul id="plan-list" class="list-unstyled"></ul>
+
+            <h3 class="mt-4">Delivery overview</h3>
+            <p id="plan-summary"></p>
+            <div id="plan-bars" hidden>
+                <div>
+                    <label for="blue-share">BLUE bottles</label>
+                    <span id="blue-count"></span>
+                </div>
+                <progress id="blue-share" value="0" max="1"></progress>
+
+                <div>
+                    <label for="silver-share">SILVER bottles</label>
+                    <span id="silver-count"></span>
+                </div>
+                <progress id="silver-share" value="0" max="1"></progress>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer border-top mt-4">
-    <div class="container foot-row">
-        <div>
-            <p class="fw-bold mb-1">NEOS Water</p>
-            <p class="mb-0">Artesian drinking water from Kazakhstan.</p>
+        <div class="container foot-row">
+            <div>
+                <p class="fw-bold mb-1">NEOS Water</p>
+                <p class="mb-0">Artesian drinking water from Kazakhstan.</p>
+            </div>
+            <address class="mb-0">
+                <p class="fw-bold mb-1">SE 2530</p>
+                <a href="tel:+77470319697">+7 747 031 96 97</a>
+                <p class="mb-0">59 Kabanbay Batyr Avenue, Astana</p>
+            </address>
+            <p class="small mb-0">© 2026 NEOS Water</p>
         </div>
-        <address class="mb-0">
-            <p class="fw-bold mb-1">SE 2530</p>
-            <a href="tel:+77470319697">+7 747 031 96 97</a>
-            <p class="mb-0">59 Kabanbay Batyr Avenue, Astana</p>
-        </address>
-        <p class="small mb-0">© 2026 NEOS Water</p>
-    </div>
-</footer>
+    </footer>
 
     <script src="js/business.js"></script>
+    <script src="js/plans.js"></script>
 </body>
-    </html>
+</html>
